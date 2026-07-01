@@ -21,7 +21,7 @@ def hello():
     db_version = cur.fetchone()
     cur.close()
     conn.close()
-    return f"Hello from Flask! Connected to: {db_version[0]}"
+    return f"Hello from Flask! v2 - Connected to: {db_version[0]}"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

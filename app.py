@@ -10,7 +10,7 @@ s3 = boto3.client("s3", region_name="ap-south-1")
 
 def get_db_connection():
     conn = psycopg2.connect(
-        host="db",
+        host=os.environ["POSTGRES_HOST"],
         database=os.environ['POSTGRES_DB'],
         user=os.environ['POSTGRES_USER'],
         password=os.environ['POSTGRES_PASSWORD']

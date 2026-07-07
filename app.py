@@ -5,6 +5,8 @@ import os
 
 app = Flask(__name__)
 
+from prometheus_flask_exporter import PrometheusMetrics
+metrics = PrometheusMetrics(app)
 BUCKET = "izaz-flask-app-bucket-2026"
 s3 = boto3.client("s3", region_name="ap-south-1")
 

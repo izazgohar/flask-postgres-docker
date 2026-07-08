@@ -10,7 +10,7 @@ services:
     restart: always
 
   web:
-    build: .
+    image: izazgohar/flask-postgres-app:latest
     expose:
       - "5000"
     environment:
